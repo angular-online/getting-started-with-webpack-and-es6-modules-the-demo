@@ -13,5 +13,5 @@ resultSum.textContent = `The sum of ${a} and ${b} is ${sum(a, b)}.`;
 resultProduct.textContent = `The product of ${a} and ${b} is ${product(a, b)}.`;
 
 
-import test from './modules/default-demo';
-test();
+import MyFunc from './modules/default-demo';
+MyFunc();
