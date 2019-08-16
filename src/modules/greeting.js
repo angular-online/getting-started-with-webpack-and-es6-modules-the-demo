@@ -1,14 +1,14 @@
 const sayHello = (greeting) => {
     const currentHour = new Date().getHours();
-    let timeGreeting = 'Good morning!';
+    let timeOfGreeting = 'Good morning!';
 
     if (currentHour >= 12 && currentHour <= 17) {
-        timeGreeting = 'Good afternoon!';
+        timeOfGreeting = 'Good afternoon!';
     } else if (currentHour >= 17) {
-        timeGreeting = 'Good evening!';
+        timeOfGreeting = 'Good evening!';
     }
 
-    return `${timeGreeting} ${greeting}`;
+    return `${timeOfGreeting} ${greeting}`;
 }
 
 export {sayHello};

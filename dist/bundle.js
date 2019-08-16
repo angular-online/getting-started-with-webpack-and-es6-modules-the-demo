@@ -71,6 +71,7 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_greeting__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_math_functions__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_default_demo__ = __webpack_require__(3);
 
 
 
@@ -85,6 +86,10 @@ resultGreeting.textContent = Object(__WEBPACK_IMPORTED_MODULE_0__modules_greetin
 resultSum.textContent = `The sum of ${a} and ${b} is ${Object(__WEBPACK_IMPORTED_MODULE_1__modules_math_functions__["b" /* sum */])(a, b)}.`;
 resultProduct.textContent = `The product of ${a} and ${b} is ${Object(__WEBPACK_IMPORTED_MODULE_1__modules_math_functions__["a" /* product */])(a, b)}.`;
 
+
+
+Object(__WEBPACK_IMPORTED_MODULE_2__modules_default_demo__["a" /* default */])();
+
 /***/ }),
 /* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -93,15 +98,15 @@ resultProduct.textContent = `The product of ${a} and ${b} is ${Object(__WEBPACK_
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return sayHello; });
 const sayHello = (greeting) => {
     const currentHour = new Date().getHours();
-    let timeGreeting = 'Good morning!';
+    let timeOfGreeting = 'Good morning!';
 
     if (currentHour >= 12 && currentHour <= 17) {
-        timeGreeting = 'Good afternoon!';
+        timeOfGreeting = 'Good afternoon!';
     } else if (currentHour >= 17) {
-        timeGreeting = 'Good evening!';
+        timeOfGreeting = 'Good evening!';
     }
 
-    return `${timeGreeting} ${greeting}`;
+    return `${timeOfGreeting} ${greeting}`;
 }
 
 
@@ -124,6 +129,17 @@ const product = (a, b) => {
 
 
 
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+    console.log('default function called');
+});
+
+// export default class {} 
 
 /***/ })
 /******/ ]);
