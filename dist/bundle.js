@@ -36,12 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -59,87 +79,59 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_greeting__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_math_functions__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_default_demo__ = __webpack_require__(3);
-
-
-
-const resultGreeting = document.getElementById('resultGreeting');
-const resultSum = document.getElementById('resultSum');
-const resultProduct = document.getElementById('resultProduct');
-
-const a = 3;
-const b = 7;
-
-resultGreeting.textContent = Object(__WEBPACK_IMPORTED_MODULE_0__modules_greeting__["a" /* sayHello */])('Nice to see you!');
-resultSum.textContent = `The sum of ${a} and ${b} is ${Object(__WEBPACK_IMPORTED_MODULE_1__modules_math_functions__["b" /* sum */])(a, b)}.`;
-resultProduct.textContent = `The product of ${a} and ${b} is ${Object(__WEBPACK_IMPORTED_MODULE_1__modules_math_functions__["a" /* product */])(a, b)}.`;
-
-
-
-Object(__WEBPACK_IMPORTED_MODULE_2__modules_default_demo__["a" /* default */])();
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_greeting__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/greeting */ \"./src/modules/greeting.js\");\n/* harmony import */ var _modules_math_functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/math-functions */ \"./src/modules/math-functions.js\");\n/* harmony import */ var _modules_default_demo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/default-demo */ \"./src/modules/default-demo.js\");\n\r\n\r\n\r\nconst resultGreeting = document.getElementById('resultGreeting');\r\nconst resultSum = document.getElementById('resultSum');\r\nconst resultProduct = document.getElementById('resultProduct');\r\n\r\nconst a = 3;\r\nconst b = 7;\r\n\r\nresultGreeting.textContent = Object(_modules_greeting__WEBPACK_IMPORTED_MODULE_0__[\"sayHello\"])('Nice to see you!');\r\nresultSum.textContent = `The sum of ${a} and ${b} is ${Object(_modules_math_functions__WEBPACK_IMPORTED_MODULE_1__[\"sum\"])(a, b)}.`;\r\nresultProduct.textContent = `The product of ${a} and ${b} is ${Object(_modules_math_functions__WEBPACK_IMPORTED_MODULE_1__[\"product\"])(a, b)}.`;\r\n\r\n\r\n\r\nObject(_modules_default_demo__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
-/* 1 */
+
+/***/ "./src/modules/default-demo.js":
+/*!*************************************!*\
+  !*** ./src/modules/default-demo.js ***!
+  \*************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return sayHello; });
-const sayHello = (greeting) => {
-    const currentHour = new Date().getHours();
-    let timeOfGreeting = 'Good morning!';
-
-    if (currentHour >= 12 && currentHour <= 17) {
-        timeOfGreeting = 'Good afternoon!';
-    } else if (currentHour >= 17) {
-        timeOfGreeting = 'Good evening!';
-    }
-
-    return `${timeOfGreeting} ${greeting}`;
-}
-
-
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n    console.log('default function called');\r\n});\r\n\r\n// export default class {} \n\n//# sourceURL=webpack:///./src/modules/default-demo.js?");
 
 /***/ }),
-/* 2 */
+
+/***/ "./src/modules/greeting.js":
+/*!*********************************!*\
+  !*** ./src/modules/greeting.js ***!
+  \*********************************/
+/*! exports provided: sayHello */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return sum; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return product; });
-const sum = (a, b) => {
-    return a + b;
-};
-
-const product = (a, b) => {
-    return a * b;
-};
-
-
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sayHello\", function() { return sayHello; });\nconst sayHello = (greeting) => {\r\n    const currentHour = new Date().getHours();\r\n    let timeOfGreeting = 'Good morning!';\r\n\r\n    if (currentHour >= 12 && currentHour <= 17) {\r\n        timeOfGreeting = 'Good afternoon!';\r\n    } else if (currentHour >= 17) {\r\n        timeOfGreeting = 'Good evening!';\r\n    }\r\n\r\n    return `${timeOfGreeting} ${greeting}`;\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/modules/greeting.js?");
 
 /***/ }),
-/* 3 */
+
+/***/ "./src/modules/math-functions.js":
+/*!***************************************!*\
+  !*** ./src/modules/math-functions.js ***!
+  \***************************************/
+/*! exports provided: sum, product */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function () {
-    console.log('default function called');
-});
-
-// export default class {} 
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sum\", function() { return sum; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"product\", function() { return product; });\nconst sum = (a, b) => {\r\n    return a + b;\r\n};\r\n\r\nconst product = (a, b) => {\r\n    return a * b;\r\n};\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/modules/math-functions.js?");
 
 /***/ })
-/******/ ]);
+
+/******/ });
