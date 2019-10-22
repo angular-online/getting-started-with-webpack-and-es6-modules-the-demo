@@ -3,14 +3,12 @@
     "version": "0.1.0",
     "description": "Getting started with webpack and ES6 modules",
     "scripts": {
-        "start": "npm run webpack",
-        "webpack": "webpack -d --watch"
+        "build": "webpack",
+        "build-and-watch": "webpack --watch"
     },
     "license": "MIT",
-    "dependencies": {
-        "webpack": "latest"
-    },
     "devDependencies": {
+        "webpack": "^4.41.2",
         "webpack-cli": "^3.3.9"
     }
 }
